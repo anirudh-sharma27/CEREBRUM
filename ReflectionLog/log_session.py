@@ -6,9 +6,9 @@ import os
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-fog_before = int(input("Enter your brainfog score before session(1-10)"))
+fog_before = float(input("Enter your brainfog score before session(1-10)"))
 reflection = input("Enter your reflection for the session: ")
-fog_after = int(input("Enter your brainfog score after session(1-10)")) 
+fog_after = float(input("Enter your brainfog score after session(1-10)")) 
 
 
 embedding = model.encode(reflection).tolist()
