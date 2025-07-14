@@ -1,0 +1,100 @@
+[
+  {
+    "reflection": "Idk i have been feeling kinda off a few days i am trying to do things but i am trying.",
+    "sentiment": "neutral",
+    "compound_score": 0.0129,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "So today i got myself a new watch and i really like it.The stress of the upcoming events are building up like a simerring fire in me.I have to make cerebrum before 25 that is 12 days.And also i have to buy new shoes.",
+    "sentiment": "neutral",
+    "compound_score": -0.044,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "I need to find a therapist when i reach insti so to say.Need to make contacts in institute but also keep my peace.",
+    "sentiment": "positive",
+    "compound_score": 0.7003,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "The more i think the more depressing things become.of my past",
+    "sentiment": "negative",
+    "compound_score": -0.4391,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "damn i feel sleepy all the time and i dont know what to do other than watch series and bide my time.but the constant worry is still torturous.",
+    "sentiment": "negative",
+    "compound_score": -0.8519,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Couldn\u2019t concentrate in class at all today. My head felt heavy and my thoughts were all over the place. After journaling, I at least feel slightly more anchored.",
+    "sentiment": "neutral",
+    "compound_score": 0.0,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Woke up exhausted, stared at the same lecture slide for 20 minutes. Still can\u2019t think straight, even now. This fog won\u2019t lift.",
+    "sentiment": "negative",
+    "compound_score": -0.1531,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Started the day groggy, but the library session helped. Writing out my plan made things feel more manageable.",
+    "sentiment": "neutral",
+    "compound_score": 0.0,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Brain felt cluttered, but once I mapped out my weekly goals I felt crystal clear. Journaling works.",
+    "sentiment": "positive",
+    "compound_score": 0.5267,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Mind spinning with assignments and upcoming exams. Can\u2019t focus on one thing. I feel better now, but still overwhelmed.",
+    "sentiment": "positive",
+    "compound_score": 0.3071,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Little foggy after lunch, but today was pretty productive overall. A quick walk really helped reset my brain.",
+    "sentiment": "positive",
+    "compound_score": 0.6486,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Group meeting drained me mentally. Too many opinions. After reflecting, I still feel scattered but slightly calmer.",
+    "sentiment": "positive",
+    "compound_score": 0.2641,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "I was doomscrolling all morning and couldn\u2019t get into work mode. Putting thoughts on paper helped me regain control",
+    "sentiment": "neutral",
+    "compound_score": 0.0,
+    "fog_score": null,
+    "date": null
+  },
+  {
+    "reflection": "Had a slow start, but once I made progress on my project, things clicked. Clarity improved throughout the day.",
+    "sentiment": "positive",
+    "compound_score": 0.9081,
+    "fog_score": null,
+    "date": null
+  }
+]
