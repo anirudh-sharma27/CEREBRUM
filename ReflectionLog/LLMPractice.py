@@ -1,11 +1,9 @@
-#api key from openrouter ai(free)
-#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
-
+#api key from groq(free)
 
 #just practice
 import openai
 
-api = "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"
+api = "gsk_aBpwbFZuxe1C3VbuU44IWGdyb3removethisbeforerunningFYpPET9Uq2Fdi34YtktIIiNoJA"
 
 client = openai.OpenAI(
     api_key=api,base_url="https://api.groq.com/openai/v1"
