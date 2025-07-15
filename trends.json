@@ -3,98 +3,112 @@
     "reflection": "Idk i have been feeling kinda off a few days i am trying to do things but i am trying.",
     "sentiment": "neutral",
     "compound_score": 0.0129,
-    "fog_score": null,
-    "date": null
+    "fog_score": 3,
+    "date": "2025-07-13 02:23:44"
   },
   {
     "reflection": "So today i got myself a new watch and i really like it.The stress of the upcoming events are building up like a simerring fire in me.I have to make cerebrum before 25 that is 12 days.And also i have to buy new shoes.",
     "sentiment": "neutral",
     "compound_score": -0.044,
-    "fog_score": null,
-    "date": null
+    "fog_score": 4,
+    "date": "2025-07-13 16:47:09"
   },
   {
     "reflection": "I need to find a therapist when i reach insti so to say.Need to make contacts in institute but also keep my peace.",
     "sentiment": "positive",
     "compound_score": 0.7003,
-    "fog_score": null,
-    "date": null
+    "fog_score": 4,
+    "date": "2025-07-13 16:49:00"
   },
   {
     "reflection": "The more i think the more depressing things become.of my past",
     "sentiment": "negative",
     "compound_score": -0.4391,
-    "fog_score": null,
-    "date": null
+    "fog_score": 6,
+    "date": "2025-07-13 16:54:07"
   },
   {
     "reflection": "damn i feel sleepy all the time and i dont know what to do other than watch series and bide my time.but the constant worry is still torturous.",
     "sentiment": "negative",
     "compound_score": -0.8519,
-    "fog_score": null,
-    "date": null
+    "fog_score": 1,
+    "date": "2025-07-13 17:00:54"
   },
   {
     "reflection": "Couldn\u2019t concentrate in class at all today. My head felt heavy and my thoughts were all over the place. After journaling, I at least feel slightly more anchored.",
     "sentiment": "neutral",
     "compound_score": 0.0,
-    "fog_score": null,
-    "date": null
+    "fog_score": 7.5,
+    "date": "2025-07-13 21:50:17"
   },
   {
     "reflection": "Woke up exhausted, stared at the same lecture slide for 20 minutes. Still can\u2019t think straight, even now. This fog won\u2019t lift.",
     "sentiment": "negative",
     "compound_score": -0.1531,
-    "fog_score": null,
-    "date": null
+    "fog_score": 8.2,
+    "date": "2025-07-13 21:51:00"
   },
   {
     "reflection": "Started the day groggy, but the library session helped. Writing out my plan made things feel more manageable.",
     "sentiment": "neutral",
     "compound_score": 0.0,
-    "fog_score": null,
-    "date": null
+    "fog_score": 6.0,
+    "date": "2025-07-13 21:51:43"
   },
   {
     "reflection": "Brain felt cluttered, but once I mapped out my weekly goals I felt crystal clear. Journaling works.",
     "sentiment": "positive",
     "compound_score": 0.5267,
-    "fog_score": null,
-    "date": null
+    "fog_score": 4.0,
+    "date": "2025-07-13 21:52:31"
   },
   {
     "reflection": "Mind spinning with assignments and upcoming exams. Can\u2019t focus on one thing. I feel better now, but still overwhelmed.",
     "sentiment": "positive",
     "compound_score": 0.3071,
-    "fog_score": null,
-    "date": null
+    "fog_score": 9.0,
+    "date": "2025-07-13 21:53:21"
   },
   {
     "reflection": "Little foggy after lunch, but today was pretty productive overall. A quick walk really helped reset my brain.",
     "sentiment": "positive",
     "compound_score": 0.6486,
-    "fog_score": null,
-    "date": null
+    "fog_score": 4.5,
+    "date": "2025-07-13 21:54:04"
   },
   {
     "reflection": "Group meeting drained me mentally. Too many opinions. After reflecting, I still feel scattered but slightly calmer.",
     "sentiment": "positive",
     "compound_score": 0.2641,
-    "fog_score": null,
-    "date": null
+    "fog_score": 6.0,
+    "date": "2025-07-13 21:54:47"
   },
   {
     "reflection": "I was doomscrolling all morning and couldn\u2019t get into work mode. Putting thoughts on paper helped me regain control",
     "sentiment": "neutral",
     "compound_score": 0.0,
-    "fog_score": null,
-    "date": null
+    "fog_score": 7.0,
+    "date": "2025-07-13 21:55:47"
   },
   {
     "reflection": "Had a slow start, but once I made progress on my project, things clicked. Clarity improved throughout the day.",
     "sentiment": "positive",
     "compound_score": 0.9081,
-    "fog_score": null,
-    "date": null
+    "fog_score": 5.2,
+    "date": "2025-07-13 21:57:19"
+  },
+  {
+    "reflection": "The day started off lazely i tried to make the paintball model with some success i hope i can finish it tomorrow.I also am progressing on cerebro.Today we did upper body exersize in gym and a few news as my trainer did not come.we did chest,shoulders and collarbone.I am likely to go to the movies tomorrow but i will have to leave early as i have gym which i am not gonna miss(hopefully).I also need to create alphas and reach gold as soon as possible.So tomorrow we will make alphas progress cerebro and probably finish the fusion model.",
+    "sentiment": "positive",
+    "compound_score": 0.8591,
+    "fog_score": 5.0,
+    "date": "2025-07-15 01:47:27"
+  },
+  {
+    "reflection": "Today i started by waking up late and going to a movie i have already watched i will implement llm and voice and then make the final gun model(just the basic).My friend and i talked about a lot of things and how i do not trust people much.He is true but i cant change who i am.Tomorrow hopefull i will finish phase 1 of my project and also make alphas.Because i have to reach gold in world quant and also make projects",
+    "sentiment": "positive",
+    "compound_score": 0.1528,
+    "fog_score": 6.0,
+    "date": "2025-07-15 23:44:29"
   }
 ]

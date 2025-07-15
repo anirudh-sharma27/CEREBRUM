@@ -12,8 +12,8 @@ trends = []
 for entry in memory:
     reflection = entry["reflection"]
     embedding = entry["embedding"] 
-    fog_score = entry.get("fog_score", None)
-    date = entry.get("date", None)  
+    fog_score = entry.get("fog_before", None)
+    date = entry.get("timestamp", None)  
     sentiment_score = analyzer.polarity_scores(reflection)
     compound = sentiment_score["compound"]
 
