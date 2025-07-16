@@ -8,3 +8,6 @@ etc.
 
 there have been some changes to the project and now it shall encompass more of nlp including voice to text and a voice of its own.
 lets hope this works out and is a good project
+
+There were some problems with the api being exposed but it has been largely resolved for now
+Basic llm has been made now we proceed to 
