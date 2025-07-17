@@ -2,8 +2,14 @@
 
 #just practice
 import openai
+#gsk_kUs
+#hehe
+#4vKSWmItThS6Bj0CKWGdyb3FYSx
+#yolo
+#6Fglho9ThmLsvdOMa5qUzO
+#hohohoho
 
-api = "gsk_aBpwbFZuxe1C3VbuU44IWGdyb3removethisbeforerunningFYpPET9Uq2Fdi34YtktIIiNoJA"
+api = "fuck around and find out"
 
 client = openai.OpenAI(
     api_key=api,base_url="https://api.groq.com/openai/v1"

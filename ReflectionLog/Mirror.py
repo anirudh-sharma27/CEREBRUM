@@ -1,5 +1,10 @@
 import json
 from LLMPractice import mirror
+
+import asyncio
+import edge_tts
+
+
 with open("trends.json", "r") as f:
     data = json.load(f)
 
@@ -17,5 +22,14 @@ for i in range(-7, 0):  # last 7 entries
 
 prompt += "Based on these entries, give a brief but emotionally intelligent summary of the user's current cognitive and emotional state. Focus on clarity, emotional tone, patterns, and recovery signs. Avoid exaggeration. Be calm and compassionate."
 print("cerebrum says-","\n")
-print(mirror(prompt))
+
+x = mirror(prompt)
+print(x)
+
+
+async def main():
+    tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
+    await tts.save("reflection.mp3")
+
+asyncio.run(main())
 
