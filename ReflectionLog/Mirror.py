@@ -1,8 +1,8 @@
 import json
-from LLMPractice import mirror
+from LLM import mirror
 import asyncio
 import edge_tts
-
+from playsound import playsound
 
 with open("trends.json", "r") as f:
     data = json.load(f)
@@ -30,8 +30,32 @@ print("cerebrum says-","\n")
 
 x = mirror(prompt)
 print(x)
+async def main():
+    tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
+    await tts.save("reflection.mp3")
 
+asyncio.run(main())
 
+playsound("reflection.mp3")
+
+print("\n Anymore questions dear?(type 'no more questions' to terminate the session.)")
+extra ="(Before answering the question remember the last prompt)" + last_prompt
+while True:
+    Sent=input("Type-")
+    if Sent=="no more questions":
+        
+        print(mirror(Sent))
+        break
+    else:
+        
+        print(mirror(extra + Sent))
+        x= mirror(extra + Sent)
+        async def main():
+            tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
+            await tts.save("reflection.mp3")
+        asyncio.run(main())
+        playsound("reflection.mp3")
+    
 async def main():
     tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
     await tts.save("reflection.mp3")
