@@ -42,23 +42,19 @@ print("\n Anymore questions dear?(type 'no more questions' to terminate the sess
 extra ="(Before answering the question remember the last prompt)" + last_prompt
 while True:
     Sent=input("Type-")
+    x=mirror(extra + Sent)
     if Sent=="no more questions":
         
-        print(mirror(Sent))
+        print("Thank you and i wish you well for the future")
         break
     else:
         
-        print(mirror(extra + Sent))
-        x= mirror(extra + Sent)
+        print(x)
+        
         async def main():
             tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
             await tts.save("reflection.mp3")
         asyncio.run(main())
         playsound("reflection.mp3")
     
-async def main():
-    tts = edge_tts.Communicate(x,"en-US-AndrewNeural")
-    await tts.save("reflection.mp3")
-
-asyncio.run(main())
 

@@ -11,7 +11,6 @@ import os
 #6Fglho9ThmLsvdOMa5qUzO
 #hohohoho
 
-api = "na"
 
 
 client = openai.OpenAI(
