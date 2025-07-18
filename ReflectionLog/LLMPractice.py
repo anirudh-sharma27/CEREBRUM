@@ -12,6 +12,7 @@ import os
 #hohohoho
 
 api = "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"
+api = "naah"
 
 client = openai.OpenAI(
     api_key=api,base_url="https://api.groq.com/openai/v1"
