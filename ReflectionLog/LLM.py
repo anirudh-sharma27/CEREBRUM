@@ -4,13 +4,9 @@
 import openai
 import json
 import os
-#gsk_kUs
-#hehe
-#4vKSWmItThS6Bj0CKWGdyb3FYSx
-#yolo
-#6Fglho9ThmLsvdOMa5qUzO
-#hohohoho
-
+#gsk_PJIABubl
+# Qrc324MmSKNpWGdyb3FY
+# wv1IVxZvMfCxOXQWhBNH6psa
 api = "naaa"
 
 
