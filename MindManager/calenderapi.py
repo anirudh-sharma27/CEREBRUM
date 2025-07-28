@@ -43,13 +43,25 @@ def create_event(service, summary, start_time_str, duration_minutes=60):
     print('Event created:', created_event.get('htmlLink'))
 
 
-# Example usage
+
+from event_extractor import extract_goal_and_date
+
 if __name__ == '__main__':
     service = authenticate_google()
 
-    # 👇 Example test event
-    summary = "Test Event from Cerebrum"
-    start_time_str = "2025-08-01T18:00:00"  # ISO format: YYYY-MM-DDTHH:MM:SS
+    user_input = "remember the year is 2025"+input("Type your reflection: ")
 
-    create_event(service, summary, start_time_str)
+    goal, date_str = extract_goal_and_date(user_input)
+
+    if goal and date_str:
+        print(f"\n📌 Detected goal: {goal}")
+        print(f"📅 Detected deadline: {date_str}")
+
+        confirm = input("Would you like me to add this to your calendar? (yes/no): ").lower()
+        if confirm == "yes":
+            create_event(service, goal, date_str)
+        else:
+            print("Okay, not added.")
+    else:
+        print("No clear goal or date found in your input.")
 
