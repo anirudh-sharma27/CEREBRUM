@@ -1,67 +1,99 @@
-#All of this needs revision ok
+# calendar_api.py
 
 import datetime
-import os.path
-import json
-
+import os
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from event_extractor import extract_events_from_llm_output
 
-# If modifying these SCOPES, delete token.json
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 def authenticate_google():
     creds = None
-    # Load credentials from token.json if available
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # If no valid credentials
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
-        # Save the credentials for next run
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
     return build('calendar', 'v3', credentials=creds)
 
-def create_event(service, summary, start_time_str, duration_minutes=60):
-    start_time = datetime.datetime.fromisoformat(start_time_str)
-    end_time = start_time + datetime.timedelta(minutes=duration_minutes)
+def create_event(service, event):
+    title = event["title"]
+    start = event["start"]
+    end = event["end"]
+    location = event["location"]
+    description = event["description"]
 
-    event = {
-        'summary': summary,
-        'start': {'dateTime': start_time.isoformat(), 'timeZone': 'Asia/Kolkata'},
-        'end': {'dateTime': end_time.isoformat(), 'timeZone': 'Asia/Kolkata'},
-    }
+    today = datetime.date.today().isoformat()
+    all_day = False
+    recurring = False
 
-    created_event = service.events().insert(calendarId='primary', body=event).execute()
-    print('Event created:', created_event.get('htmlLink'))
+    if not start:
+        start = today
+        end = today
+        all_day = True
+        recurring = True
+    elif "T" not in start:
+        all_day = True
+        end = start
 
+    if all_day:
+        calendar_event = {
+            'summary': title,
+            'location': location,
+            'description': description,
+            'start': {'date': start, 'timeZone': 'Asia/Kolkata'},
+            'end': {'date': end, 'timeZone': 'Asia/Kolkata'},
+        }
+    else:
+        calendar_event = {
+            'summary': title,
+            'location': location,
+            'description': description,
+            'start': {'dateTime': start, 'timeZone': 'Asia/Kolkata'},
+            'end': {'dateTime': end, 'timeZone': 'Asia/Kolkata'},
+        }
 
+    if recurring:
+        calendar_event['recurrence'] = ['RRULE:FREQ=DAILY']
 
-from event_extractor import extract_goal_and_date
+    created_event = service.events().insert(calendarId='primary', body=calendar_event).execute()
+    print(f"✅ Created: {title} ({created_event.get('htmlLink')})")
 
-if __name__ == '__main__':
+def main():
     service = authenticate_google()
 
-    user_input = "remember the year is 2025"+input("Type your reflection: ")
+    print("📝 Enter your full reflection:")
+    reflection = input("You: ")
 
-    goal, date_str = extract_goal_and_date(user_input)
+    print("\n🤖 Paste LLM output (CREATE_EVENT lines, one per line):")
+    lines = []
+    while True:
+        line = input()
+        if line.strip().lower() in ['done', '']:
+            break
+        lines.append(line)
+    llm_output = "\n".join(lines)
 
-    if goal and date_str:
-        print(f"\n📌 Detected goal: {goal}")
-        print(f"📅 Detected deadline: {date_str}")
+    events = extract_events_from_llm_output(llm_output)
 
-        confirm = input("Would you like me to add this to your calendar? (yes/no): ").lower()
-        if confirm == "yes":
-            create_event(service, goal, date_str)
-        else:
-            print("Okay, not added.")
-    else:
-        print("No clear goal or date found in your input.")
+    if not events:
+        print("⚠️ No valid events detected.")
+        return
 
+    for e in events:
+        try:
+            create_event(service, e)
+        except Exception as err:
+            print(f"❌ Failed to create event: {e['title']}")
+            print("   ↳", err)
+
+if __name__ == "__main__":
+    main()

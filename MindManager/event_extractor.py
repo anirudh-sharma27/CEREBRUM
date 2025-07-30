@@ -23,3 +23,34 @@ def extract_goal_and_date(text):
             return goal, date.strftime("%Y-%m-%dT%H:%M:%S") if date else None
 
     return None, None
+# event_extractor.py
+
+def clean(text):
+    for prefix in ["i have to:", "i need to:", "i must:", "I have to:", "I need to:", "I must:"]:
+        if text.lower().startswith(prefix):
+            return text[len(prefix):].strip()
+    return text.strip()
+
+def extract_events_from_llm_output(llm_output: str):
+    """
+    Parses LLM output into a list of structured event dictionaries.
+    Each line should follow:
+    CREATE_EVENT|title|start|end|location|description
+    """
+    events = []
+    lines = llm_output.strip().split("\n")
+    for line in lines:
+        if not line.strip().startswith("CREATE_EVENT"):
+            continue
+        try:
+            _, title, start, end, location, description = line.strip().split("|")
+            events.append({
+                "title": clean(title),
+                "start": start.strip(),
+                "end": end.strip(),
+                "location": clean(location),
+                "description": clean(description)
+            })
+        except ValueError:
+            print(f"⚠️ Skipping invalid line: {line}")
+    return events
