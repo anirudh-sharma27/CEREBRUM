@@ -110,5 +110,40 @@
     "compound_score": 0.1528,
     "fog_score": 6.0,
     "date": "2025-07-15 23:44:29"
+  },
+  {
+    "reflection": "today i woke up very late as i watched a movie yesterday late till night.i mostly played stuff and decided to not go to the gym from now on as i have to move to college.i basically spent my whole day just lazing around and not doing anything.i am stoked for tomorrow.I also have a few days after which i have college so yeah.",
+    "sentiment": "positive",
+    "compound_score": 0.6447,
+    "fog_score": 5.0,
+    "date": "2025-07-18 20:20:48"
+  },
+  {
+    "reflection": "Today I got a nice sleep and since it was sunday it was a relax day.But still i dont want to leave home and go back to college.I dont know how long i can stay strong for but i will try my best.People are doing there best and here i am wasting time and watching Dexter.I have to up my game someway or the other or else its over for me.I need to make projects participate in hacks and comps and do everything i can.Its the only way.Its the only way that doesnt end in misery",
+    "sentiment": "positive",
+    "compound_score": 0.9044,
+    "fog_score": 5.0,
+    "date": "2025-07-21 00:06:14"
+  },
+  {
+    "reflection": "today was the second day in the institute and goddamn it is hot as a witches coochie here like wtf.I have to do lots of work namely dsa,cerebrum,alpha,greenbook.and maintain my pors and academics all the same.It is quite hectic but i got to make an alpha today so thats good.I have classes from tomorrow.",
+    "sentiment": "negative",
+    "compound_score": -0.0772,
+    "fog_score": 5.0,
+    "date": "2025-07-27 19:57:02"
+  },
+  {
+    "reflection": "I had a lot of classes today but its was ok.I played tabletennis and foosball a lot today.I am geting worried about quant and its work.About the tasks.I have to make the Quant Alpha report by tomorrow eod.I have to do Dynamic Programming and The Green book as much as i can tomorrow.",
+    "sentiment": "positive",
+    "compound_score": 0.5719,
+    "fog_score": 5.0,
+    "date": "2025-07-31 01:05:30"
+  },
+  {
+    "reflection": "Today was a bland day.As such no interesting things happened,I realise i am a lot far away and i have to do some retrospection and fix my schedule which i will probably do tomorrow.Sjayanati can burn in hell,fuking smiley devil in disguise.I need to get far away from friends as possible as i have to travel an uncharted path.I want to do prof projects but i hope they can accept me and allow me.",
+    "sentiment": "positive",
+    "compound_score": 0.8527,
+    "fog_score": 5.0,
+    "date": "2025-08-29 20:32:10"
   }
 ]

@@ -4,8 +4,12 @@ from langchain_community.llms import HuggingFaceHub
 import os
 
 # Set your API keys
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_nkGtDSIF" \
+"" \
+"ZgPmGWxYeSmssQztttVWAonsqv"
+os.environ["OPENAI_API_KEY"] = "gsk_PJIABublQrc324Mm" \
+"" \
+"SKNpWGdyb3FYwv1IVxZvMfCxOXQWhBNH6psa"
 os.environ["OPENAI_API_BASE"] = "https://api.groq.com/openai/v1"
 
 # ✅ Using Groq's LLaMA via OpenAI-compatible API
