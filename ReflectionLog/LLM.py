@@ -4,11 +4,7 @@ import openai
 import json
 import os
 
-api = "gsk_FepcEcKY1" \
-"" \
-"S6ekX3oDacLWGdyb3FYWP" \
-"" \
-"vympWNWvnZCVeBaTv1hq3R"
+api = "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"
 
 client = openai.OpenAI(
     api_key=api,

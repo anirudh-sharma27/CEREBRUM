@@ -31,13 +31,13 @@ print("cerebrum says-\n")
 x = mirror(prompt)
 print(x)
 
-async def main():
+'''async def main():
     tts = edge_tts.Communicate(x, "en-US-AndrewNeural")
     await tts.save("reflection.mp3")
 
 asyncio.run(main())
 playsound("reflection.mp3")
-
+'''
 print("\n Anymore questions dear? (type 'no more questions' to terminate the session.)")
 extra = "(Before answering the question remember the last prompt)\n" + last_prompt
 
@@ -49,8 +49,8 @@ while True:
     else:
         x = mirror(Sent + "\n\n" + extra)
         print(x)
-        async def main():
+        '''async def main():
             tts = edge_tts.Communicate(x, "en-US-AndrewNeural")
             await tts.save("reflection.mp3")
         asyncio.run(main())
-        playsound("reflection.mp3")
+        playsound("reflection.mp3")'''
