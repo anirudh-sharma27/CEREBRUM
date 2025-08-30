@@ -22,18 +22,22 @@ tags = []
 
 model = KeyBERT()
 
-x = model.extract_keywords(reflection,keyphrase_ngram_range=(1,3))
+
+x = model.extract_keywords(str.lower(reflection),stop_words = "english")
 print("Here are some curated tags from your Journal-")
 for i in x:
-    (a,b) = x[i]
+    (a,b) = i
     print(a)
     k = input("Keep this?:")
     if k in ["yes","Yes"]:
         tags.append(a)
-    
-k = input("Any other tag you would like to add?:")
-if k!="no":
-    tags.append(k)
+while True:
+
+    k = input("Any other tag you would like to add?:")
+    if k=="no":
+        break
+    else:
+        tags.append(k)
 
 
 entry = {
