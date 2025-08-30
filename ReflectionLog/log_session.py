@@ -1,27 +1,51 @@
 from sentence_transformers import SentenceTransformer
 import json
+from keybert import KeyBERT
 from datetime import datetime
 import os
 
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-fog_before = float(input("Enter your brainfog score before session(1-10)"))
+
+mood = float(input("How are you feeling today?(7-Very positive  ; 1 - Very negative):"))
+focus = float(input("Rate your focus today(5-Very focused ;1 - No focus):"))
+confidence = float(input("rate your confidence today(5- very confident ,1 - Not confident at all):"))
 reflection = input("Enter your reflection for the session: ")
-fog_after = float(input("Enter your brainfog score after session(1-10)")) 
 
 
 embedding = model.encode(reflection).tolist()
 
 now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+tags = []
+
+
+model = KeyBERT()
+
+x = model.extract_keywords(reflection,keyphrase_ngram_range=(1,3))
+print("Here are some curated tags from your Journal-")
+for i in x:
+    (a,b) = x[i]
+    print(a)
+    k = input("Keep this?:")
+    if k in ["yes","Yes"]:
+        tags.append(a)
+    
+k = input("Any other tag you would like to add?:")
+if k!="no":
+    tags.append(k)
+
 
 entry = {
     "timestamp":now,
-    "fog_before": fog_before,
+    "mood": mood,
+    "focus":focus,
+    "confidence":confidence,
+    "tags":tags,
     "reflection": reflection,
-    "fog_after": fog_after,
     "embedding": embedding
 }
+
 
 file = "memory.json"
 
