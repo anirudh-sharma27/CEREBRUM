@@ -11,7 +11,7 @@ while True:
         with open("memory.json", "w") as f:
             json.dump(data, f, indent=4)
 
-        print("✅ Restored memory.json from memory.enc")
+        print("Restored memory.json from memory.enc")
         break
     except:
         print("Please enter the right passcode")

@@ -47,7 +47,7 @@ def lock_journal(passphrase: str, infile="memory.json", outfile="memory.enc", sa
 
     # Optionally delete the original plaintext for safety
     os.remove(infile)
-    print(f"❌ Deleted {infile} (only {outfile} remains locked).")
+    
 
 
 def unlock_journal(passphrase: str, infile="memory.enc", saltfile="salt.bin"):
