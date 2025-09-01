@@ -1,19 +1,4 @@
 from lockcommand import lock_journal, unlock_journal
-from datetime import datetime
-import json
-from keybert import KeyBERT
-from sentence_transformers import SentenceTransformer,util
-
-    
-with open("memory.json" ,"r") as f:
-    data = json.load(f)
-
-    tags = [entry["tags"] for entry in data]
-
-
-
-    
-    
 
 
 # First time: lock your existing memory.json
