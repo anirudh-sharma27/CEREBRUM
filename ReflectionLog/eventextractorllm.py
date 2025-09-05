@@ -2,13 +2,12 @@
 
 import openai
 import json
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+api = os.getenv("Event_Key")
 
-'''api = "gsk_wLoMO5QLDrybWsIr" \
-"delete this pleasss" \
-"LBqcWGdyb3FYGVx8B8JcDpEKg" \
-"" \
-"JfDaBXXEtCt"'''
 
 client = openai.OpenAI(
     api_key=api,
@@ -45,3 +44,4 @@ for i in range(2,len(x)):
     date.append(l[2])
 
 print(events,time,date)
+print("ANYTHING ELSE YOU WOULD LIKE TO ADD?")
