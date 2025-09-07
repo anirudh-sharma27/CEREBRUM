@@ -1,16 +1,37 @@
 [
     {
-        "event": " buy bread ",
-        "starttime": " 9:00 AM ",
-        "endtime": " 9:00 PM ",
-        "date": " 08 September 2025 ",
-        "location": " null "
+        "event": "Read Renga sir's research on carbon capture",
+        "starttime": "09:00",
+        "endtime": "21:00",
+        "date": "2025-09-07",
+        "location": "null"
     },
     {
-        "event": " bury the living ",
-        "starttime": " 6:00 PM ",
-        "endtime": " 9:00 PM ",
-        "date": " 08 September 2025 ",
-        "location": " the gravestone crypt "
+        "event": "Remind Renga sir for the meet",
+        "starttime": "09:00",
+        "endtime": "21:00",
+        "date": "2025-09-07",
+        "location": "null"
+    },
+    {
+        "event": "Meet with Renga sir",
+        "starttime": "09:00",
+        "endtime": "21:00",
+        "date": "2025-09-08",
+        "location": "null"
+    },
+    {
+        "event": "Start DSA",
+        "starttime": "09:00",
+        "endtime": "21:00",
+        "date": "2025-09-09",
+        "location": "null"
+    },
+    {
+        "event": "Era of change",
+        "starttime": "09:00",
+        "endtime": "21:00",
+        "date": "2025-09-09",
+        "location": "null"
     }
 ]

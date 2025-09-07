@@ -28,43 +28,41 @@ def get_calendar_service():
 # --- Add Events to Calendar ---
 def add_event(service, event):
     """
-    Expects event dict with:
+    Expects event dict like:
     {
-      "title": "...",
-      "date": "YYYY-MM-DD",
-      "start_time": "HH:MM",
-      "end_time": "HH:MM",
-      "location": null or "place"
+      "title": "Meeting with Kaushal",
+      "date": "2025-09-07",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "location": null
     }
     """
-    start = f"{event['date']}T{event['start_time']}:00+05:30"
-    end   = f"{event['date']}T{event['end_time']}:00+05:30"
+
+    # Build RFC3339 datetime strings
+    start = f"{event['date']}T{event['starttime']}:00+05:30"
+    end   = f"{event['date']}T{event['endtime']}:00+05:30"
 
     gcal_event = {
-        "summary": event["title"],
+        "summary": event["event"],   # Required
         "start": {"dateTime": start, "timeZone": "Asia/Kolkata"},
         "end": {"dateTime": end, "timeZone": "Asia/Kolkata"},
     }
 
+    # Add optional location if exists
     if event.get("location"):
         gcal_event["location"] = event["location"]
 
+    # Debug: print before sending
+    print(" Sending event:", json.dumps(gcal_event, indent=2))
+
+    # Insert into calendar
     service.events().insert(calendarId="primary", body=gcal_event).execute()
-    print(f"✅ Added event: {event['title']} on {event['date']} at {event['start_time']}")
+    print(f"Added event: {event['event']} on {event['date']} at {event['starttime']}")
 
-# --- Main ---
-if __name__ == "__main__":
-    # Example: events extracted from LLM
-    reflection_events = """
-    [
-      {"title": "Buy 5 eggs", "date": "2025-09-07", "start_time": "09:00", "end_time": "21:00", "location": null},
-      {"title": "Finish Cerebrum project", "date": "2025-09-09", "start_time": "09:00", "end_time": "21:00", "location": null},
-      {"title": "Meeting with Kaushal", "date": "2025-09-06", "start_time": "21:00", "end_time": "22:00", "location": null}
-    ]
-    """
+with open("events.json","r") as f:
+    data = json.load(f)
 
-    events = json.loads(reflection_events)
+for i in data:
     service = get_calendar_service()
+    add_event(service,i)
 
-    for e in events:
-        add_event(service, e)
